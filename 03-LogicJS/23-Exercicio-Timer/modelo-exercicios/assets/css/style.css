@@ -31,3 +31,7 @@ body {
 .relogio {
     font-size: 2em;
 }
+
+.stoped {
+    color: red;
+}
