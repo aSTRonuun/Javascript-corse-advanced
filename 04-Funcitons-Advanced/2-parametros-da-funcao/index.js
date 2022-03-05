@@ -21,3 +21,24 @@ function sum(a, b = 2, c = 4) {
 
 sum(10);
 
+// Argumentos via desistruturacao de objetos
+function funcao({name, lastname, age}) {
+    console.log(name, lastname, age);
+}
+
+let obj = { name: "Vitor", lastname: "Alves", age: 21};
+funcao(obj);
+
+// Usando o rest operator como parametro de funcoes (o rest operator precisa obrigatoriamente ser o ultimo parametro)
+function conta(operator, accumulator, ...numbers) {
+    for(let number of numbers) {
+        if(operator === "+") accumulator += number;
+        if(operator === "-") accumulator -= number;
+        if(operator === "/") accumulator /= number;
+        if(operator === "*") accumulator *= number;
+    }
+    console.log(accumulator);
+}
+
+conta("+", 0, 2, 4, 6, 8, 10);
+
